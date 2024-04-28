@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="/assets/css/mdb.min.css">
 
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -46,6 +48,15 @@
                 <a class="nav-link" href="#">MonsterWatch</a>
               </li>
             </ul>
+
+            <div class="input-group">
+              <div class="form-outline" data-mdb-input-init>
+                <input id="search-input" type="search" id="form1" class="form-control" placeholder="Search" />
+              </div>
+              <button id="search-button" type="button" class="btn btn-primary bd-radius">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
             
       
             <div class="d-flex align-items-center">
@@ -63,6 +74,14 @@
       </nav>
 
     <div class="container">
+      <label for='styledSelect1' class='custom-select'>
+          <select #styledSelect1 name='options' id="sort-choise" onchange="SortingElement()">
+            <option value="rating">Rating</option>
+            <option value='to-low'> High To Low</option>
+            <option value='to-high'> Low To High</option>
+          </select>
+          <i class="fa-solid fa-arrows-up-down"></i>
+      </label>
         <div class="row my-5" id="movie-area">
             
         </div>
